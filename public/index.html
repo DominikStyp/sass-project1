@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
     <title>Sass Project 1</title>
 </head>
 <body>
-<h1> Sass project 1</h1>
+<div id="container">
+    <h1> Sass project 1</h1>
 
+    <div id="banner-message">
+        <p>Hello World</p>
+        <button>Hover to change color</button>
+    </div>
+</div>
+<script>
+    jQuery(function($){
+        $("#banner-message").hover(function(){
+            $("body").addClass("containerDarker")
+        },function () {
+            $("body").removeClass("containerDarker");
+        });
+    })
+</script>
 </body>
 </html>
