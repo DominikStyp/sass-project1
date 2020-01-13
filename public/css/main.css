@@ -8,6 +8,11 @@ h1, h2 {
   padding: 10px;
 }
 
+@media (min-width: 300px) and (max-width: 769px) {
+  h2::before {
+    content: "[smartphone]";
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   h2::before {
     content: "[ipad]";
@@ -31,6 +36,19 @@ h1, h2 {
   border: 1px solid red;
   position: absolute;
   z-index: -1;
+}
+
+#center-box {
+  margin: 20px auto;
+  border: 1px solid #20262E;
+  background-color: aqua;
+  border-radius: 4px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 15px 15px;
+  /** 100vw = 100% of viewport width */
+  width: calc(500px + calc(100vw - 1024px));
 }
 
 .normalBannerButton, #banner-message button {
