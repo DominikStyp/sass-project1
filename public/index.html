@@ -12,6 +12,7 @@
 <body>
 <div id="container">
     <h1> Sass project 1</h1>
+    <h2></h2>
 
     <div id="banner-message">
         <p>Hello World</p>
@@ -21,9 +22,9 @@
 <script>
     jQuery(function($){
         $("#banner-message").hover(function(){
-            $("body").addClass("containerDarker")
+            $("#container").addClass("containerDarker")
         },function () {
-            $("body").removeClass("containerDarker");
+            $("#container").removeClass("containerDarker");
         });
     })
 </script>
