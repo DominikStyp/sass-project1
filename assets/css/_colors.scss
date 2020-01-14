@@ -1,0 +1,10 @@
+$colors: (
+        blue-darker: darken(#0084ff, 5),
+        banner-message-border: #0084ff,
+        banner-message-background: #176a75,
+        background-darker: #20262E
+);
+
+@function getColor($colorName){
+  @return map_get($colors, $colorName);
+}

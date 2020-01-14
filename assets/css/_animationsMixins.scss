@@ -1,0 +1,17 @@
+
+@mixin animation ($widthFrom, $heightFrom, $widthTo, $heightTo, $fontFrom, $fontTo, $duration) {
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes resize {
+    from { width: $widthFrom; height: $heightFrom; font-size: $fontFrom }
+    to   { width: $widthTo; height: $heightTo; font-size: $fontTo }
+  }
+  /* Standard syntax */
+  @keyframes resize {
+    from { width: $widthFrom; height: $heightFrom; font-size: $fontFrom }
+    to  { width: $widthTo; height: $heightTo; font-size: $fontTo }
+  }
+  -webkit-animation-name: resize; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: $duration; /* Safari 4.0 - 8.0 */
+  animation-name: resize;
+  animation-duration: $duration;
+}

@@ -1,0 +1,21 @@
+$smartphoneMinWidth: 300px;
+$smartphoneMaxWidth: 769px;
+@mixin smartphone {
+  @media (min-width: #{$smartphoneMinWidth}) and (max-width: #{$smartphoneMaxWidth}) {
+    @content;
+  }
+}
+$ipadMinWidth: 768px;
+$ipadMaxWidth: 1024px;
+@mixin ipad {
+  @media (min-width: #{$ipadMinWidth}) and (max-width: #{$ipadMaxWidth}) {
+    @content;
+  }
+}
+
+$desktopWidth: 1025px;
+@mixin desktop {
+  @media (min-width: #{$desktopWidth}) {
+    @content;
+  }
+}
