@@ -23,8 +23,6 @@ h2::before {
    }
 }
 
-
-
 .containerDarker {
   background: getColor(background-darker) !important;
 }
@@ -49,8 +47,8 @@ $aBoxWidthFrom: calc(#{$aBoxWidthTo} * 0.1);
 $fontFrom: calc(#{$fontTo} * 0.1);
 
 #animated-box {
-  @extend .aquaBox;
-  @extend .autoResizeBoxSmall;
+  @extend %aquaBox;
+  @extend %autoResizeBoxSmall;
   width: $aBoxWidthTo;
   height: $aBoxHeightTo;
   font-size: $fontTo;
