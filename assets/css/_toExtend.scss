@@ -1,0 +1,30 @@
+.aquaBox {
+  margin: 20px auto;
+  border: 1px solid #20262E;
+  background-color: aqua;
+  border-radius: 4px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.autoResizeBoxSmall{
+  /** 100vw = 100% of viewport width */
+  width: calc(500px + calc(100vw - 1024px));
+  padding: 15px 15px;
+  font-size: 18px;
+}
+
+.autoResizeBoxMedium{
+  width: calc(600px + calc(100vw - 1024px));
+  padding: 40px 20px;
+  font-size: 22px;
+}
+#center-box-small {
+  @extend .aquaBox;
+  @extend .autoResizeBoxSmall;
+}
+#center-box-medium {
+  @extend .aquaBox;
+  @extend .autoResizeBoxMedium;
+}

@@ -1,7 +1,7 @@
 @import "responsiveMixins";
 @import "colors";
 @import "animationsMixins";
-
+@import "toExtend";
 
 body {
   font-family: Helvetica;
@@ -23,16 +23,7 @@ h2::before {
    }
 }
 
-@mixin aquaBox {
-  margin: 20px auto;
-  border: 1px solid #20262E;
-  background-color: aqua;
-  border-radius: 4px;
-  text-align: center;
-  justify-content: center;
-  font-size: 18px;
-  padding: 15px 15px;
-}
+
 
 .containerDarker {
   background: getColor(background-darker) !important;
@@ -47,11 +38,7 @@ h2::before {
   z-index: -1;
 }
 
-#center-box {
-  @include aquaBox;
-  /** 100vw = 100% of viewport width */
-  width: calc(500px + calc(100vw - 1024px));
-}
+
 
 $aBoxHeightTo: 100px;
 $aBoxWidthTo: 510px;
@@ -62,7 +49,8 @@ $aBoxWidthFrom: calc(#{$aBoxWidthTo} * 0.1);
 $fontFrom: calc(#{$fontTo} * 0.1);
 
 #animated-box {
-  @include aquaBox;
+  @extend .aquaBox;
+  @extend .autoResizeBoxSmall;
   width: $aBoxWidthTo;
   height: $aBoxHeightTo;
   font-size: $fontTo;
