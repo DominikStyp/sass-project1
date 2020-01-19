@@ -1,0 +1,12 @@
+@mixin _green {
+  color: #6eff01;
+}
+
+@mixin _bold {
+  font-weight: bold;
+}
+
+@mixin boldGreen {
+  @include _bold;
+  @include _green;
+}

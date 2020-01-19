@@ -1,3 +1,4 @@
+$lettersList: A, B, C, D, E, F;
 #animated-box {
   p {
     padding:0;
@@ -8,5 +9,12 @@
     #p#{$i} {
       font-size: 1em + ($i * 0.05);
     }
+    #p#{$i}:before {
+      $letter: nth($lettersList, $i);
+      content: "#{$letter}) ";
+    }
+  }
+  @each $letter in $lettersList {
+
   }
 }

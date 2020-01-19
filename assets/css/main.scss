@@ -1,3 +1,5 @@
+@use "privateMixins";
+
 @import "responsiveMixins";
 @import "colors";
 @import "animationsMixins";
@@ -6,6 +8,13 @@
 
 body {
   font-family: Helvetica;
+}
+h3 {
+  text-align: center;
+  padding:0;
+  margin:0;
+  @include privateMixins.boldGreen;
+  @include privateMixins._bold;
 }
 h1, h2 {
   margin:0 auto;
