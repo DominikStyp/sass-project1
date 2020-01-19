@@ -2,6 +2,7 @@
 @import "colors";
 @import "animationsMixins";
 @import "toExtend";
+@import "forLoop";
 
 body {
   font-family: Helvetica;
@@ -28,7 +29,7 @@ h2::before {
 }
 #container {
   width: 100%;
-  height: 100%;
+  height: 120%;
   background-color: #005dff;
   clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
   border: 1px solid red;
@@ -38,7 +39,7 @@ h2::before {
 
 
 
-$aBoxHeightTo: 100px;
+$aBoxHeightTo: 120px;
 $aBoxWidthTo: 510px;
 $fontTo: 18px;
 
