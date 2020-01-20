@@ -20,12 +20,22 @@
     grid-area: topMenu;
   }
   #sidebar {
-    background: #444f61;
+    background: #858585;
     grid-area: sidebar;
   }
   #content {
     background: #c1c1c1;
     grid-area: content;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    .card {
+      border:1px solid #d8d8d8;
+      background: #858585;
+      padding:10px;
+    }
   }
   #footer {
     background: #7f7f7f;
