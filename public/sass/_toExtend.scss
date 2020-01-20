@@ -17,6 +17,7 @@
   %placeholer = ABSTRACT CLASS
   .class = REGULAR CLASS
  */
+
 %autoResizeBoxSmall{
   /** 100vw = 100% of viewport width */
   width: calc(500px + calc(100vw - 1024px));
