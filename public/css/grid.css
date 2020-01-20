@@ -1,0 +1,30 @@
+#container {
+  display: grid;
+  grid-template-areas: "topMenu topMenu topMenu" "content content sidebar" "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+#container #topMenu, #container #sidebar, #container #content, #container #footer {
+  padding: 1em;
+  border: 1px solid #20262E;
+}
+#container #topMenu {
+  background: #eee;
+  grid-area: topMenu;
+}
+#container #sidebar {
+  background: #444f61;
+  grid-area: sidebar;
+}
+#container #content {
+  background: #c1c1c1;
+  grid-area: content;
+}
+#container #footer {
+  background: #7f7f7f;
+  grid-area: footer;
+}
+
+/*# sourceMappingURL=grid.css.map */

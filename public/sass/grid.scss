@@ -1,0 +1,35 @@
+@use "privateMixins";
+@import "responsiveMixins";
+#container {
+  display:grid;
+  grid-template-areas:
+          "topMenu topMenu topMenu"
+          "content content sidebar"
+          "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  #topMenu, #sidebar, #content, #footer {
+
+    padding: 1em;
+    border: 1px solid #20262E;
+  }
+  #topMenu {
+    background: #eee;
+    grid-area: topMenu;
+  }
+  #sidebar {
+    background: #444f61;
+    grid-area: sidebar;
+  }
+  #content {
+    background: #c1c1c1;
+    grid-area: content;
+  }
+  #footer {
+    background: #7f7f7f;
+    grid-area: footer;
+  }
+}
