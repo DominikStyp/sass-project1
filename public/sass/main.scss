@@ -1,10 +1,12 @@
 @use "privateMixins";
+@use "someNamespace";
 
 @import "responsiveMixins";
 @import "colors";
 @import "animationsMixins";
 @import "toExtend";
 @import "forLoop";
+
 
 body {
   font-family: Helvetica;
@@ -43,6 +45,14 @@ h2::before {
   border: 1px solid red;
   position:absolute;
   z-index: -1;
+
+  .form {
+     @include someNamespace.form;
+  }
+  .form input {
+      @include someNamespace.input;
+  }
+
 }
 
 
