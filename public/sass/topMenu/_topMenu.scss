@@ -1,0 +1,36 @@
+
+$commonIconsDir: "/sass-project1/public/icons";
+$commonIconSize: "48x48";
+
+@mixin _topMenuIcon($iconFileName) {
+  background: url("#{$commonIconsDir}/#{$iconFileName}#{$commonIconSize}.png") no-repeat;
+  padding-left: 50px;
+  max-width:60px;
+}
+
+#topMenu {
+    ul {
+       padding:0; margin:0;
+       display: grid;
+       grid-template-columns: 1fr 1fr 8fr;
+       li {
+          list-style-type: none;
+          border: 1px solid red;
+          height:45px;
+          padding: 3px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+       }
+       li#login {
+          @include _topMenuIcon("login");
+       }
+       li#userProfile {
+          @include _topMenuIcon("user-profile");
+       }
+       li#rightBar {
+
+       }
+    }
+}

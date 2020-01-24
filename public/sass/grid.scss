@@ -1,5 +1,6 @@
 @use "privateMixins";
 @import "responsiveMixins";
+@import "topMenu/topMenu";
 #container {
   display:grid;
   grid-template-areas:
@@ -7,7 +8,7 @@
           "content content sidebar"
           "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 1fr 80px;
+  grid-template-rows: auto 1fr 80px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 
