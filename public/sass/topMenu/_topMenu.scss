@@ -1,11 +1,11 @@
 
 $commonIconsDir: "/sass-project1/public/icons";
-$commonIconSize: "48x48";
+$commonIconPx: 48;
+$commonIconSize: "#{$commonIconPx}x#{$commonIconPx}";
+$menuElementsBreakingPointWidth: 1148;
 
 @mixin _topMenuIcon($iconFileName) {
   background: url("#{$commonIconsDir}/#{$iconFileName}#{$commonIconSize}.png") no-repeat;
-  padding-left: 50px;
-  max-width:60px;
 }
 
 #topMenu {
@@ -14,19 +14,38 @@ $commonIconSize: "48x48";
        display: grid;
        grid-template-columns: 1fr 1fr 8fr;
        li {
-          list-style-type: none;
-          border: 1px solid red;
-          height:45px;
-          padding: 3px 0;
           display: flex;
-          justify-content: center;
-          align-items: center;
+          border: 1px solid red;
+          list-style-type: none;
+          padding: 3px 0;
           font-weight: bold;
+          height: #{$commonIconPx}px;
+          a {
+             text-decoration: none;
+             color: #000000;
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: center;
+             align-items: center;
+             height:  #{$commonIconPx}px;
+             i {
+                //border: 1px solid green;
+                display: inline-block;
+                width:  #{$commonIconPx}px;
+                height:  #{$commonIconPx}px;
+             }
+             span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: calc(#{$commonIconPx}px + 10px);
+             }
+          }
        }
-       li#login {
+       li#login > a > i {
           @include _topMenuIcon("login");
        }
-       li#userProfile {
+       li#userProfile > a > i {
           @include _topMenuIcon("user-profile");
        }
        li#rightBar {

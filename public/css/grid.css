@@ -5,24 +5,38 @@
   grid-template-columns: 1fr 1fr 8fr;
 }
 #topMenu ul li {
-  list-style-type: none;
+  display: flex;
   border: 1px solid red;
-  height: 45px;
+  list-style-type: none;
   padding: 3px 0;
+  font-weight: bold;
+  height: 48px;
+}
+#topMenu ul li a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+#topMenu ul li a i {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+#topMenu ul li a span {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  min-width: calc(48px + 10px);
 }
-#topMenu ul li#login {
+#topMenu ul li#login > a > i {
   background: url("/sass-project1/public/icons/login48x48.png") no-repeat;
-  padding-left: 50px;
-  max-width: 60px;
 }
-#topMenu ul li#userProfile {
+#topMenu ul li#userProfile > a > i {
   background: url("/sass-project1/public/icons/user-profile48x48.png") no-repeat;
-  padding-left: 50px;
-  max-width: 60px;
 }
 #container {
   display: grid;
